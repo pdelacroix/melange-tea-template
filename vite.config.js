@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [
     melangePlugin({
       emitDir: "src",
-      buildCommand: "opam exec -- dune build @react",
-      watchCommand: "opam exec -- dune build --watch @react",
+      buildCommand: "opam exec -- dune build @app",
+      watchCommand: "opam exec -- dune build --watch @app",
     }),
   ],
 });

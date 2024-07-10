@@ -1,6 +1,6 @@
 opam-version: "2.0"
-synopsis: "Melange project"
-description: "Minimal melange project"
+synopsis: "Melange TEA project"
+description: "Minimal Melange TEA project"
 maintainer: ["<your_name>"]
 authors: ["<your_name>"]
 license: "MIT"
@@ -10,12 +10,15 @@ depends: [
   "ocaml"
   "reason" {>= "3.10.0"}
   "dune" {>= "3.9"}
-  "melange" {>= "2.0.0"}
-  "reason-react" {>= "0.13.0"}
-  "reason-react-ppx"
+  "melange" {>= "3.0.0"}
+  "melange-webapi" {= "0.21.0"}
   "opam-check-npm-deps" {with-test} # todo: use with-dev-setup once opam 2.2 is out
   "ocaml-lsp-server" {with-test} # todo: use with-dev-setup once opam 2.2 is out
   "dot-merlin-reader" {with-test} # todo: use with-dev-setup once opam 2.2 is out
   "odoc" {with-doc}
+  "melange-tea" {dev}
 ]
 dev-repo: "git+https://github.com/your/project.git"
+pin-depends: [
+  [ "melange-tea.dev" "git+https://gitlab.com/technostructures/lib/melange-tea.git" ]
+]

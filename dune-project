@@ -2,7 +2,7 @@
 
 (using melange 0.1)
 
-(name melange-vite-template)
+(name melange-tea-template)
 
 (license "MIT")
 
@@ -16,6 +16,6 @@
 
 (package
  (allow_empty)
- (name melange-vite-template)
- (synopsis "Melange project")
- (description "Minimal melange project"))
+ (name melange-tea-template)
+ (synopsis "Melange TEA project")
+ (description "Minimal Melange TEA project"))

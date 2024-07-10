@@ -1,7 +1,8 @@
-# melange-vite-template
+# melange-tea-template
 
 A simple project template using [Melange](https://github.com/melange-re/melange)
-with [opam](https://opam.ocaml.org/) and [Vite](https://vitejs.dev/).
+with [opam](https://opam.ocaml.org/), [Vite](https://vitejs.dev/) and
+[melange-tea](https://gitlab.com/technostructures/lib/melange-tea).
 
 If you are looking for a template with webpack, check [melange-opam-template](https://github.com/melange-re/melange-opam-template).
 
@@ -11,12 +12,6 @@ If you are looking for a template with esy, check [melange-esy-template](https:/
 
 For informations about Vite integration and filing issues, see the [vite-plugin-melange repository](https://github.com/pdelacroix/vite-plugin-melange).
 
-## Possible improvements
-
-- Use [vite-node](https://www.npmjs.com/package/vite-node) for the Node part
-- SSR
-- Integration with [vitest](https://vitest.dev/)
-
 ## Quick Start
 
 ```shell
@@ -24,12 +19,6 @@ npm run init
 
 npm run dev
 ```
-
-### React
-
-React support is provided by
-[`reason-react`](https://github.com/reasonml/reason-react/). The entry
-point of the sample React app is [`src/ReactApp.re`](src/ReactApp.re).
 
 ## Commands
 
@@ -54,23 +43,7 @@ change
 Since Melange compiles source files into JavaScript files, it can be used
 for projects on any JavaScript platform - not just the browser.
 
-The template includes two `melange.emit` stanza for two separate apps. This
-stanza tells Dune to generate JavaScript files using Melange, and specifies in
-which folder the JavaScript files should be placed, by leveraging the `target`
-field:
-- The React app JavaScript files will be placed in `_build/default/src/output/*`.
-- The NodeJS app JavaScript files will be placed in `_build/default/src/node/*`.
-
-So for example, [`src/Hello.ml`](src/Hello.ml) (using OCaml syntax) can be run with
-`node`:
-
-```bash
-node _build/default/src/node/src/Hello.mjs
-```
-
-Similarly, `_build/default/src/output/src/ReactApp.js` can be passed as entry to a bundler
-like Webpack:
-
-```bash
-webpack --mode production --entry ./_build/default/src/output/src/ReactApp.js
-```
+The template configure Dune with the `melange.emit` stanza. This stanza tells
+Dune to generate JavaScript files using Melange, and specifies in which folder
+the JavaScript files should be placed, by leveraging the `target` field: The
+TEA app JavaScript files will be placed in `_build/default/src/output/*`.
